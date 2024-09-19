@@ -4,9 +4,10 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
     const currentAmount = document.getElementById('current-amount').innerText;
     const numberAmount=parseInt(currentAmount);
     const addAmount = document.getElementById('add-amount').value;
+    document.getElementById('add-amount').value = ""
     const numberaddAmount=parseInt(addAmount);
     const moneyAddPin = document.getElementById('money-add-pin').value;
-   
+    document.getElementById('money-add-pin').value = ""
     if(moneyAddPin ==='1234'){
         const newAmount = numberAmount + numberaddAmount;
         document.getElementById('current-amount').innerText = newAmount;
@@ -23,8 +24,10 @@ document.getElementById('btn-cash-out').addEventListener('click', function(event
     const currentAmount = document.getElementById('current-amount').innerText;
     const numberAmount=parseInt(currentAmount);
     const cashOutAmount = document.getElementById('cash-out-amount').value;
+    document.getElementById('cash-out-amount').value = ""
     const numbercashOutAmount=parseInt(cashOutAmount);
     const cashOutPin = document.getElementById('cash-out-pin').value;
+    document.getElementById('cash-out-pin').value = ""
    
     if(cashOutPin==='1234'){
         const newcashOutAmount = numberAmount -  numbercashOutAmount;
